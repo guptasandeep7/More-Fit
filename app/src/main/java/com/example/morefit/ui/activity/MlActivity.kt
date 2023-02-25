@@ -58,7 +58,6 @@ class MlActivity : AppCompatActivity() {
      **/
 
     private var modelPos = 1
-    var data= mutableListOf<String>("1")
     /** Default device is CPU */
     private var device = Device.CPU
 

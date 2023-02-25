@@ -5,6 +5,9 @@ import com.example.morefit.model.WeekMeal
 import com.google.android.gms.common.internal.HideFirstParty
 import okhttp3.ResponseBody
 import retrofit2.Call
+import com.google.android.gms.common.internal.HideFirstParty
+import okhttp3.ResponseBody
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -15,6 +18,15 @@ interface ApiInterface {
     fun postData(
         @Field("muscle") muscle: String,
         @Field("category") category: String,
+        @Field("gender") gender: String="Male"
+    ): Call<List<Data>>
+
+
+    @GET("post/")
+    fun getAllPosts(): Call<List<Forum>>
+
+    @POST("post/")
+    fun createPost(@Body body: CreateForum): Call<Forum>
         @Field("gender") gender: String="Male"
     ): Call<List<Data>>
 
