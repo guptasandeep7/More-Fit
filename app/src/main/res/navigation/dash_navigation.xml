@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dash_navigation"
+    app:startDestination="@id/gymFragment">
+
+    <fragment
+        android:id="@+id/gymFragment"
+        android:name="com.example.morefit.ui.fragment.dash.gym.GymFragment"
+        android:label="fragment_gym"
+        tools:layout="@layout/fragment_gym" >
+        <action
+            android:id="@+id/action_gymFragment_to_exerciseFragment2"
+            app:destination="@id/exerciseFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/yogaFragment"
+        android:name="com.example.morefit.ui.fragment.dash.yoga.YogaFragment"
+        android:label="fragment_yoga"
+        tools:layout="@layout/fragment_yoga" >
+        <action
+            android:id="@+id/action_yogaFragment_to_yogaPoseDetailsFragment"
+            app:destination="@id/yogaPoseDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="com.example.morefit.ui.fragment.dash.diet.DietFragment"
+        android:label="fragment_diet"
+        tools:layout="@layout/fragment_diet" >
+        <action
+            android:id="@+id/action_dietFragment_to_dietPlan"
+            app:destination="@id/dietPlan" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseFragment2"
+        android:name="com.example.morefit.ui.fragment.dash.gym.ExerciseFragment"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise" />
+    <fragment
+        android:id="@+id/dietPlan"
+        android:name="com.example.morefit.ui.fragment.dash.diet.DietPlan"
+        android:label="DietPlan" />
+    <fragment
+        android:id="@+id/yogaPoseDetailsFragment"
+        android:name="com.example.morefit.ui.fragment.dash.yoga.YogaPoseDetailsFragment"
+        android:label="YogaPoseDetailsFragment" >
+        <argument
+            android:name="yogaPose"
+            app:argType="com.example.morefit.model.Pose" />
+    </fragment>
+</navigation>
